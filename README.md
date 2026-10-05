@@ -1,4 +1,4 @@
-# Agent Skills
+# Designer Skills
 
 Skills by [Rod Howard](https://rodhoward.design) for exploring ideas before building them. Install one skill or the collection in Claude Code or Codex.
 
@@ -16,19 +16,19 @@ Run these commands in your terminal. They use the [open-source skills CLI](https
 **Patchwork**
 
 ```sh
-npx skills add rodh/agent-skills --skill patchwork
+npx skills add rodh/designer-skills --skill patchwork
 ```
 
 **Spike**
 
 ```sh
-npx skills add rodh/agent-skills --skill spike
+npx skills add rodh/designer-skills --skill spike
 ```
 
 **The complete collection**
 
 ```sh
-npx skills add rodh/agent-skills --skill '*'
+npx skills add rodh/designer-skills --skill '*'
 ```
 
 Keep the quotes around `'*'` so your shell does not expand it. By default, installation applies to the current project. Add `--global` to make the skills available across your projects.
@@ -37,22 +37,22 @@ To select an agent explicitly:
 
 ```sh
 # Both skills, available across Claude Code projects
-npx skills add rodh/agent-skills --skill '*' --agent claude-code --global
+npx skills add rodh/designer-skills --skill '*' --agent claude-code --global
 
 # Both skills, available across Codex projects
-npx skills add rodh/agent-skills --skill '*' --agent codex --global
+npx skills add rodh/designer-skills --skill '*' --agent codex --global
 
 # Inspect the collection without installing
-npx skills add rodh/agent-skills --list
+npx skills add rodh/designer-skills --list
 ```
 
-You can also ask Codex: “Use $skill-installer to install skills/patchwork from rodh/agent-skills.” Specify both `skills/patchwork` and `skills/spike` to install both.
+You can also ask Codex: “Use $skill-installer to install skills/patchwork from rodh/designer-skills.” Specify both `skills/patchwork` and `skills/spike` to install both.
 
 ### Download instead
 
-- [Download Patchwork](https://github.com/rodh/agent-skills/releases/latest/download/patchwork.zip)
-- [Download Spike](https://github.com/rodh/agent-skills/releases/latest/download/spike.zip)
-- [Download the collection](https://github.com/rodh/agent-skills/releases/latest/download/agent-skills.zip)
+- [Download Patchwork](https://github.com/rodh/designer-skills/releases/latest/download/patchwork.zip)
+- [Download Spike](https://github.com/rodh/designer-skills/releases/latest/download/spike.zip)
+- [Download the collection](https://github.com/rodh/designer-skills/releases/latest/download/designer-skills.zip)
 
 Unzip the download and move the skill folders into the appropriate location. Each folder must directly contain its `SKILL.md` and supporting files.
 
@@ -96,7 +96,7 @@ python3 -m unittest discover -s tests
 python3 scripts/package.py
 ```
 
-Packaging writes one ZIP per skill, `agent-skills.zip`, and `SHA256SUMS` to `dist/`. Each ZIP includes the license; generated archives are not committed. CI validates and packages every push and pull request. Pushing a version tag such as `v1.0.1` runs those checks and publishes a GitHub release with the downloads attached.
+Packaging writes one ZIP per skill, `designer-skills.zip`, and `SHA256SUMS` to `dist/`. Each ZIP includes the license; generated archives are not committed. CI validates and packages every push and pull request. Pushing a version tag such as `v1.0.1` runs those checks and publishes a GitHub release with the downloads attached.
 
 Before tagging a release, test the changed skill with a realistic request. Packaging checks establish that files are valid and complete; they do not evaluate the agent's output quality.
 

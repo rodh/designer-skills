@@ -19,7 +19,7 @@ class PackagesTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder:
             archives = build(output=folder)
             for archive in archives:
-                names = ([archive.stem] if archive.stem != "agent-skills"
+                names = ([archive.stem] if archive.stem != "designer-skills"
                          else sorted(p.name for p in (ROOT / "skills").iterdir()))
                 expected = {p.relative_to(ROOT / "skills").as_posix(): p.read_bytes()
                             for name in names for p in (ROOT / "skills" / name).rglob("*")

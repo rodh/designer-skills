@@ -14,7 +14,7 @@ def build(root=ROOT, output=None):
     output = Path(output) if output else root / "dist"
     output.mkdir(parents=True, exist_ok=True)
     skills = sorted((root / "skills").iterdir())
-    groups = [(skill.name, [skill]) for skill in skills] + [("agent-skills", skills)]
+    groups = [(skill.name, [skill]) for skill in skills] + [("designer-skills", skills)]
     archives = []
     for name, folders in groups:
         archive = output / f"{name}.zip"
