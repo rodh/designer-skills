@@ -54,7 +54,14 @@ it, and that answer is what graduates.
 6. **Park it where it'll be found.** Open or parked direction → an issue,
    linked from the README. Graduated → the commit that ported it. Either way,
    leave a note wherever this project keeps decisions, so the verdict is
-   recalled next session instead of re-derived.
+   recalled next session instead of re-derived. That is a decisions log or
+   the spike's own README, **not** the agent instructions file (`CLAUDE.md`,
+   `AGENTS.md`): it loads into every session, so a verdict parked there taxes
+   every future task and goes stale in place. If the project has no decisions
+   log, start one (`docs/decisions.md`) and point to it from the instructions
+   file once. Add a line to the instructions file only when the spike taught
+   a rule that applies beyond its page, written as the rule itself: no dates,
+   round counts or variant letters.
 
 ## Hard boundaries
 
